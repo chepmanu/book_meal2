@@ -6,9 +6,14 @@ from app import models
 
 app = create_app(config_name=os.getenv('APP_SETTINGS'))
 migrate = Migrate(app, db)
-manager = Manager(app)
 
-manager.add_command('db', MigrateCommand)
+@app.cli.command()
+def dropdb():
+    db.session.commit()
+    db.reflect()
+    db.drop_all()
 
-if __name__ == '__main__':
-     manager.run()   
+
+@app.cli.command()
+def create_db():
+    db.create_all()
