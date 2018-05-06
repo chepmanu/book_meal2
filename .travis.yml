@@ -7,10 +7,6 @@ cache: pip
 
 install:
   - pip install -r requirements.txt
-env:
-  - DB=postgres
-  - SH=bash
-  - TEST_DB_URL= postgres://postgres@localhost/travis_ci_test
 
 services:
   - postgresql
