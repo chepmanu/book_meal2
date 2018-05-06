@@ -113,7 +113,7 @@ def add_meal(current_user):
 @token_required
 def getmeals_endpoint(current_user):
     if not current_user.is_admin:
-        return jsonify({'message':'you must an admin'}), 401
+        return jsonify({'message':'unauthorized'}), 401
          
     meals = Meal.query.all()
     results = meals_schema.dump(meals).data
@@ -226,7 +226,7 @@ def allorders_endpoint(current_user):
     return jsonify({"orders":result})
 
 #Modify an order
-@api.route('/api/v2/order/<int:id>', methods=['PUT'])
+@api.route('/api/v2/orders/<int:id>', methods=['PUT'])
 @token_required
 def modifyorder_endpoint(current_user, id):
     #Confirm if the id in the url has an order
@@ -249,7 +249,7 @@ def modifyorder_endpoint(current_user, id):
 
     
 #Select order from orders
-@api.route('/api/v2/order/<int:id>', methods=['GET'])
+@api.route('/api/v2/orders/<int:id>', methods=['GET'])
 @token_required
 def getoneorder_endpoint(current_user,id):
     if not current_user.is_admin:
