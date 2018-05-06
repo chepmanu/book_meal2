@@ -62,8 +62,6 @@ def priceValidate(price):
         errors.append('price can only contain intergers')
     if price <= 0:
         errors.append('price cannot be a negative number')
-    # if  not re.match("^[a-zA-Z0-9_]*$", str(price)):
-    #     errors.append('price should not contain any special characters apart from an underscore')
     if price > 500000:
         errors.append('are you sure, price so big!')
 

@@ -16,8 +16,7 @@ api = Blueprint('api', __name__)
 
 @api.errorhandler(400)
 def bad(err):
-    return jsonify({"message":"Bad error, check data format"}),400
-    #return jsonify({"message":str(err)}), 400
+    return jsonify({"message":str(err)}), 400
 
 @api.errorhandler(500)
 def internal_error(error):
