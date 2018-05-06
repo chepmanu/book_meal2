@@ -6,7 +6,7 @@ Git pages :
   <img src="./homepage.png"  alt="Book A Meal Home Page" width="350"/>
 </p>
 The link for this projects UI can be found at:https://chepmanu.github.io/book_meal/
-1.This is an app that allows for people to make orders and caterers to set up and complete orders.
+* This is an app that allows for people to make orders and caterers to set up and complete orders.
 
 ## How to run.
 1. Create a virtual env and activate it.
