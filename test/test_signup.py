@@ -29,10 +29,7 @@ class EndPointsTestCase(unittest.TestCase):
         response = self.client.post('/api/v2/auth/signup', data=json.dumps(self.user),content_type='application/json')
         res = self.client.post('/api/v2/auth/signin', data=json.dumps(self.user_login),content_type='application/json')
         self.token = json.loads(res.data)['token']
-        claim = jwt.decode(self.token, 'thisismanuchepsecretkey15')
-        print(claim)
-        
-        
+    
 
     def test_signup(self):
         """ Test API endpoint can register a new user"""

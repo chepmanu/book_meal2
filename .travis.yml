@@ -11,6 +11,7 @@ install:
 env:
   SECRET='aQDAFFSDFGSDGDSGSDGSDGSDFGFGFdsffdgfgfhghgDSGFDS'
   TEST_DB_URI='postgres://postgres@localhost/travis_ci_test'
+  
 services:
   - postgresql
 
