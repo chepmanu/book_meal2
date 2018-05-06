@@ -8,7 +8,7 @@ app = create_app(config_name=os.getenv('APP_SETTINGS'))
 migrate = Migrate(app, db)
 
 @app.cli.command()
-def dropdb():
+def drop_db():
     db.session.commit()
     db.reflect()
     db.drop_all()
