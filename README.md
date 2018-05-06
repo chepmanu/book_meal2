@@ -1,6 +1,7 @@
 # Book A Meal
 https://travis-ci.org/chepmanu/book_meal2.svg?branch=master
-This is an app that allows for people to make orders and caterers to set up and complete orders.
+<img src='/homepage.png',  alt='bookmeal_homepage'>
+1.This is an app that allows for people to make orders and caterers to set up and complete orders.
 
 ## How to run.
 1. Create a virtual env and activate it.
