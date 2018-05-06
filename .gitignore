@@ -99,4 +99,5 @@ ENV/
 
 # mypy
 .mypy_cache/
->>>>>>> 82c222a0ae0321250b8c16dd1e63797375a39874
+venv
+migrations
