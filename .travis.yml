@@ -7,6 +7,17 @@ cache: pip
 
 install:
   - pip install -r requirements.txt
+env:
+  - DB=postgres
+  - SH=bash
+  - TEST_DB_URL= "postgres://postgres@localhost/travis_ci_test"
+
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+
 
 script:
   - nosetests --with-coverage --cover-package app
