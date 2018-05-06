@@ -123,9 +123,9 @@ class EndPointsTestCase(unittest.TestCase):
         menu_id ={
             "menu_id":menu_id2
         }
-        res = self.client.put('/api/v2/order/{}'.format(order_id), data=json.dumps(menu_id),content_type='application/json', headers={'Authorization':self.token})
+        res = self.client.put('/api/v2/orders/{}'.format(order_id), data=json.dumps(menu_id),content_type='application/json', headers={'Authorization':self.token})
         self.assertEqual(res.status_code, 200)
-        response = self.client.get('/api/v2/order/{}'.format(order_id), headers={'Authorization':self.token})
+        response = self.client.get('/api/v2/orders/{}'.format(order_id), headers={'Authorization':self.token})
         self.assertEqual(response.status_code, 200)
 
 
@@ -197,7 +197,7 @@ class EndPointsTestCase(unittest.TestCase):
             meal2 = Menu.query.filter_by(menu_id=meal).first()
             meal1 = Meal.query.filter_by(meal_id=meal2.meals).first()
         self.assertIn('githeri', meal1.food)
-        res = self.client.get('/api/v2/order/{}'.format(order), headers={'Authorization':self.token})
+        res = self.client.get('/api/v2/orders/{}'.format(order), headers={'Authorization':self.token})
         self.assertEqual(res.status_code, 200) 
 
 
