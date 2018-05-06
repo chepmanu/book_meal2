@@ -1,6 +1,11 @@
 # Book A Meal
-https://travis-ci.org/chepmanu/book_meal2.svg?branch=master
-<img src='/homepage.png',  alt='bookmeal_homepage'>
+[![Build Status](https://travis-ci.org/chepmanu/book_meal2.svg?branch=master)](https://travis-ci.org/chepmanu/book_meal2)
+
+Git pages :
+<p align="center">
+  <img src="./homepage.png"  alt="Book A Meal Home Page" width="350"/>
+</p>
+The link for this projects UI can be found at:https://chepmanu.github.io/book_meal/
 1.This is an app that allows for people to make orders and caterers to set up and complete orders.
 
 ## How to run.
