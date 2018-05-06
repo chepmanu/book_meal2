@@ -1,7 +1,7 @@
 import os
 class Config(object):
     """Parent configuration class."""
-    DEBUG = False
+    DEBUG = True
     CSRF_ENABLED = True
     SECRET = os.getenv('SECRET')
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
@@ -10,6 +10,7 @@ class Config(object):
 class DevelopmentConfig(Config):
     """Configurations for Development."""
     DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:erayle15@localhost/bm_db'
 
 class TestingConfig(Config):
     """Configurations for Testing, with a separate test database."""
